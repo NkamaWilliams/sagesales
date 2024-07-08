@@ -1,94 +1,49 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import InputText from "@/components/text_input";
+import DropdownFilter from "@/components/dropdown-filter";
+import Item from "@/components/item";
+import styles from "@/styles/page.module.css";
+import items from "@/resources/items.json"
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <header className={styles.header}>
+        <div className={styles.tagline}>
+          <h2>Express Yourself. Own Your Style.</h2>
+          <p>Discover the latest trends and hottest pieces to elevate your look. Shop Now!</p>
+        </div>
+        <InputText tag="Search Category, brand ...."/>
+      </header>
+
+      <div className={styles.banner}>
+        <h1>FASHION FOR EVERY YOU</h1>
+        <p>Unleash your style</p>
+      </div>
+
+      <div className={styles.filters}>
+        <div className={styles.category}>
+          <p className={styles.filterName}>Categories</p>
+          <div>
+            <button className={styles.selectable}>Men</button>
+            <button>Women</button>
+            <button>Babies</button>
+          </div>
+        </div>
+
+        <div className={styles.otherFilter}>
+          <DropdownFilter filterType="Categories" name="Men" mobileOnly={true}/>
+          <DropdownFilter filterType="Type" name="All" />
+          <DropdownFilter filterType="Brand" name="All" />
+          <DropdownFilter filterType="Price Filter" name="₤0.00 - ₤500.00" />
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={styles.products}>
+        {
+          items.map(item => 
+            <Item key={item.src} src={item.src} name={item.name} brand={item.brand} price={item.price} />
+          )
+        }
       </div>
     </main>
   );

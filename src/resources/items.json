@@ -1,0 +1,26 @@
+[
+    {
+        "brand": "Nike",
+        "name": "Air Jordan One",
+        "price": 199.99,
+        "src": "/air_jordan.jpeg"
+    },
+    {
+        "brand": "Ray Bam",
+        "name": "Sunglasses",
+        "price": 39.99,
+        "src": "/glasses.jpeg"
+    },
+    {
+        "brand": "Nike",
+        "name": "Air Force One",
+        "price": 109.99,
+        "src": "/air_force.jpeg"
+    },
+    {
+        "brand": "New Balance",
+        "name": "237 V1 Sneaker",
+        "price": 89.99,
+        "src": "/v1.jpeg"
+    }
+]

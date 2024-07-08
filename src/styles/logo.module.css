@@ -1,0 +1,13 @@
+.logo{
+    position: relative;
+    min-width: 165px;
+    aspect-ratio: 5.89;
+}
+
+.logoLarge{
+    position: relative;
+    min-width: 165px;
+    max-width: 395px;
+    width: 100%;
+    aspect-ratio: 5.89;
+}

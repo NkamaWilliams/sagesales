@@ -1,0 +1,43 @@
+.input{
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    position: relative;
+    flex: 1;
+}
+
+.label{
+    font-size: var(--font-small);
+    color: var(--text2);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input input{
+    width: 100%;
+    height: 46px;
+    padding: 12px 8px;
+    font-size: var(--font-mid);
+    border: 1px solid var(--tet-bg);
+    border-radius: 4px;
+}
+
+.dropdown{
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}
+
+.card{
+    position: absolute;
+    aspect-ratio: 3;
+    height: 32px;
+    right: 5px;
+    bottom: 8px;
+}
+
+@media (max-width: 810px){
+    .input{
+        margin-left: 0;
+    }
+}

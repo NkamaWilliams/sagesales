@@ -1,0 +1,174 @@
+.main{
+    padding: 1rem 4rem;
+    min-height: 60vh;
+    display: flex;
+}
+
+.main > div{
+    flex: 1;
+}
+
+.back{
+    font-size: 32px;
+    font-weight: var(--weight-heavy);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 4rem;
+    background-color: transparent;
+    border: none;
+}
+
+.back:hover{
+    cursor: pointer;
+}
+
+.progress{
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.connector{
+    height: 1px;
+    max-width: 72px;
+    width: 100%;
+    border: 1px solid var(--text2);
+}
+
+.page{
+    position: relative;
+    margin: 10px 5px;
+    border: 1px solid var(--tet-bg);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.page h3{
+    font-size: var(--font-big);
+    margin: 10px 8px;
+}
+
+.overview{
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: var(--font-mid);
+    color: var(--text2);
+    border: 1px solid var(--tet-bg);
+    border-radius: 8px;
+}
+
+.overview > div{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.overview > hr{
+    background-color: var(--tet-bg);
+    height: 1px;
+    border: none;
+}
+
+.price, .total{
+    font-weight: 600;
+    color: black;
+}
+
+.overview > button, .page1 > button{
+    display: none;
+}
+
+.overview > button, .payButton, .page1 > button{
+    width: 100%;
+    height: 46px;
+    background-color: black;
+    color: white;
+    font-size: var(--font-mid);
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+}
+
+.edit{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 38px;
+    padding: 12px 8px;
+    font-size: var(--font-big);
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+}
+
+.edit:hover{
+    cursor: pointer;
+}
+
+.double{
+    display: flex;
+    gap: 10px;
+}
+
+.black{
+    border: 1px solid black
+}
+
+@media (max-width: 810px){
+    .back{
+        margin: 20px 16px;
+        font-size: var(--font-big);
+    }
+
+    .progress{
+        display: flex;
+    }
+
+    .reveal{
+        display: block;
+    }
+
+    .page1 .edit{
+        display: none;
+    }
+
+    .main{
+        padding: 16px;
+        flex-direction: column;
+    }
+
+    .page{
+        padding: 0;
+    }
+
+    .page{
+        border: none;
+    }
+
+    .overview > button, .page1 > button{
+        display: block;
+    }
+
+    .double{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .page1, .page2, .page3{
+        display: none;
+    }
+
+    .reveal{
+        display: block;
+    }
+}

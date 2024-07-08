@@ -1,0 +1,155 @@
+
+.cartitem{
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.details{
+    position: relative;
+    margin: 0 20px;
+    width: 100%;
+}
+
+.details > div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: var(--font-small);
+}
+
+.details > article{
+    max-width: 500px;
+}
+
+.name{
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.brand{
+    color: var(--text2);
+    margin-bottom: 10px;
+}
+
+.image{
+    max-width: 240px;
+    width: 100%;
+    aspect-ratio: 1.33;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.price{
+    max-width: 150px;
+    width: 100%;
+    text-align: end;
+}
+
+.price > h3{
+    font-size: 20px;
+    margin: 8px;
+}
+
+.amount{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.amount > button{
+    flex-grow: 1;
+    background-color: black;
+    color: white;
+    padding: 4px 0;
+    max-width: 71px;
+    width: 100%;
+    font-size: 24px;
+    margin: 5px;
+    border-radius: 24px;
+}
+
+.amount > button:hover{
+    cursor: pointer;
+}
+
+.trash{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 105px;
+    height: 38px;
+    padding: 8px 12px;
+    font-size: var(--font-mid);
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background-color: #FE5050;
+}
+
+.trash > div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trash:hover{
+    cursor: pointer;
+}
+
+.trashMobile{
+    display: none;
+    height: 24px;
+    width: 24px;
+}
+
+@media (max-width: 810px){
+    .image{
+        max-width: 170px;
+        min-width: 100px;
+        width: 100%;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        justify-content: initial;
+    }
+
+    .details > div{
+        flex-direction: column;
+    }
+
+    .price{
+        display: flex;
+        align-items: center;
+    }
+
+    .price > h3{
+        font-size: var(--font-small);
+    }
+
+    .about{
+        display: none;
+    }
+
+    .trash > p{
+        display: none;
+    }
+
+    .trash{
+        display: none;
+    }
+
+    .trashMobile{
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+    }
+}
