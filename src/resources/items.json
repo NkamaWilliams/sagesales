@@ -22,5 +22,77 @@
         "name": "237 V1 Sneaker",
         "price": 89.99,
         "src": "/v1.jpeg"
+    },
+    {
+        "brand": "Adidas",
+        "name": "Gazelle",
+        "price": 78.99,
+        "src": "/gazelle.jpeg"
+    },
+    {
+        "brand": "New Balance",
+        "name": "574 Core",
+        "price": 69.99,
+        "src": "/527.jpeg"
+    },
+    {
+        "brand": "Adidas",
+        "name": "Superstar",
+        "price": 129.99,
+        "src": "/superstar.jpeg"
+    },
+    {
+        "brand": "Nike",
+        "name": "Sweat Shirt",
+        "price": 2.99,
+        "src": "/air_jordan_low.png"
+    },
+    {
+        "brand": "Nike",
+        "name": "Brazil Jersey",
+        "price": 29.99,
+        "src": "/brazil.jpeg"
+    },
+    {
+        "brand": "Nike",
+        "name": "Lakers Jersey",
+        "price": 25.99,
+        "src": "/lakers.jpeg"
+    },
+    {
+        "brand": "Polo",
+        "name": "Baseball Hat",
+        "price": 4.99,
+        "src": "/baseball.jpeg"
+    },
+    {
+        "brand": "New York",
+        "name": "Beanie",
+        "price": 4.99,
+        "src": "/beanie.jpeg"
+    },
+    {
+        "brand": "Lee",
+        "name": "Men Jean",
+        "price": 9.99,
+        "src": "/jean1.jpeg"
+    },
+    {
+        "brand": "Wrangler",
+        "name": "Men Jean",
+        "price": 19.99,
+        "src": "/jean2.jpeg"
+    },
+    {
+        "brand": "Rolex",
+        "name": "Cosmograph Daytona",
+        "price": 499.99,
+        "src": "/cosmograph.jpeg"
+    },
+    {
+        "brand": "Ray Bam",
+        "name": "Party Glasses",
+        "price": 69.99,
+        "src": "/party_glasses.jpeg"
     }
 ]

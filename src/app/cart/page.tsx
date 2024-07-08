@@ -21,7 +21,7 @@ export default function Cart(){
                     <div>
                         <h3>Order Summary</h3>
                         <div className={styles.orderedItem}>
-                            <p className={styles.item}>x2 Airforce Jordan Lows 1</p>
+                            <p className={styles.item}>x1 Airforce Jordan Lows 1</p>
 
                             <p className={styles.price}>₤ 199.99</p>
                         </div>

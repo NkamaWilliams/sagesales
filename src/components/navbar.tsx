@@ -10,17 +10,23 @@ export default function Navbar(){
     const path = usePathname();
     return(
         <nav className={styles.nav}>
-            <Link className={styles.home} href="./"><Logo small={false}/></Link>
+            <div className={styles.home}>
+                <Icon src="/menu.svg" mobileOnly={true}/>
+                <Link href="/">
+                    <Logo small={false}/>
+                </Link>
+            </div>
+
+            <Link className={`${styles.cart} ${path == "/cart" && styles.selectedMobile}`} href="/cart">
+                {path == "/cart" ?<Icon src="/cart_white.svg" mobileOnly={true}/>:<Icon src="/cart.svg" mobileOnly={true}/>}
+            </Link>
 
             {/* <InputText/> */}
-            <div className={styles.menu}>
-                <div className={styles.image}>
-                    <Image alt="menu" src="/menu.svg" fill/>
-                </div>
-                <div className={`${styles.menuitems} ${styles.hide}`}>
+            <div className={`${styles.menu}  ${styles.hide}`}>
+                <div className={`${styles.menuitems}`}>
                     <Link className={`${styles.link} ${path == "/" ? styles.selected:""}`} href="./">Shop</Link>
                     <Link className={styles.link} href="./">Contact us</Link>
-                    <Link className={`${styles.link} ${path == "/cart" && styles.selected}`} href="./cart">{path == "/cart"?<Icon src="/cart_white.svg"/>: <Icon src="/cart.svg"/>} Cart</Link>
+                    <Link className={`${styles.link} ${path == "/cart" && styles.selected} `} href="./cart">{path == "/cart"?<Icon src="/cart_white.svg"/>: <Icon src="/cart.svg"/>} Cart</Link>
                 </div>
             </div>
         </nav>
