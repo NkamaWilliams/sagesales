@@ -63,7 +63,7 @@
 }
 
 .button{
-    display: block;
+    display: none;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -71,6 +71,7 @@
     max-width: 108px;
     height: 40px;
     margin-top: 10px;
+    border: none;
     border-radius: 12px;
     background-color: black;
     color: white;
@@ -79,10 +80,19 @@
 
 .button:hover{
     cursor: pointer;
+    opacity: 0.8;
+}
+
+.button:active{
+    opacity: 1;
 }
 
 .button > span{
     display: none;
+}
+
+.item:hover .button{
+    display: block;
 }
 
 @media (max-width: 810px){
@@ -115,7 +125,11 @@
         display: none;
     }
 
-    .button > span{
+    .item .button{
+        display: none;
+    }
+
+    .item:hover .button > span{
         display: block;
     }
 

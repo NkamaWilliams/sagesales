@@ -36,12 +36,6 @@ export default function Item({src, brand, name, price, colors = false}: props){
                 </div>
 
                 <div>
-                    {colors && <div className={styles.colors}>
-                        <div className={`${styles.color}`}><Icon src="black.svg" small={true}/></div>
-                        <div className={`${styles.color}`}><Icon src="green.svg" small={true}/></div>
-                        <div className={`${styles.color}`}><Icon src="brown.svg" small={true}/></div>
-                    </div>}
-
                     <button className={styles.button}>
                         <p onClick={handleAdd}>Add to cart</p>
                         <span onClick={handleAdd}><Icon src="/shop.svg" large/></span>

@@ -86,8 +86,10 @@ export default function Cart(){
                     
                     <div className={styles.proceed}>
                         <div>
-                            <p className={styles.item}>Items (4)</p>
-                            <p className={styles.item}>Total <span className={styles.price}> ₤1479.93</span></p>
+                            <p className={styles.item}>Items ({items.length})</p>
+                            <p className={styles.item}>Total <span className={styles.price}> ₤{checkout.reduce((prev, item) => {
+                                return prev + (item.price * item.quantity);
+                            }, 0).toFixed(2)}</span></p>
                         </div>
                         <Link href="./checkout"><button className={styles.button}>Proceed to checkout</button></Link>
                     </div>

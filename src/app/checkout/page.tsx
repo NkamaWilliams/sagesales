@@ -24,12 +24,14 @@ export default function Checkout(){
     const handleProceed = () => {
         if (selected < 2){
             setSelected(selected + 1)
+            router.push(`/checkout#page${selected+1}`)
         }
     }
 
     const handleReceed = () => {
         if (selected > 0){
             setSelected(selected - 1);
+            router.push(`/checkout`)
         }
         else{
             router.push("/cart");
@@ -56,8 +58,8 @@ export default function Checkout(){
             </div>
 
             <div className={styles.main}>
-                <div className={`${styles.page2} ${styles.page} ${selected == 1 && styles.reveal}`}>
-                    <h3>Order details (4)</h3>
+                <div id="page1" className={`${styles.page2} ${styles.page} ${selected == 1 && styles.reveal}`}>
+                    <h3>Order details ({items.length})</h3>
                     {
                         items.map(item => 
                             <CheckoutItem key={item.src} src={item.src} name={item.name} price={item.price} quantity={item.quantity} />
@@ -87,7 +89,7 @@ export default function Checkout(){
                 </div>
 
                 <div>
-                    <div className={`${styles.page1} ${styles.page} ${selected == 0 && styles.reveal}`}>
+                    <div id="page0" className={`${styles.page1} ${styles.page} ${selected == 0 && styles.reveal}`}>
                         <h3>Delivery Information </h3>
                         <button className={styles.edit}>Edit</button>
 
@@ -110,7 +112,7 @@ export default function Checkout(){
                         <button onClick={handleProceed}>Proceed</button>
                     </div>
 
-                    <div className={`${styles.page3} ${styles.page} ${selected == 2 && styles.reveal}`}>
+                    <div id="page2" className={`${styles.page3} ${styles.page} ${selected == 2 && styles.reveal}`}>
                         <h3>Payment </h3>
 
                         <div className={styles.form}>
@@ -121,7 +123,7 @@ export default function Checkout(){
                             </div>
                         </div>
 
-                        <button className={styles.payButton}>Pay Now ₤1388</button>
+                        <button className={styles.payButton}>Pay Now ₤{(total + 9.92).toFixed(2)}</button>
                     </div>
                 </div>
             </div>

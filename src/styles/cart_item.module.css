@@ -85,7 +85,7 @@
 }
 
 .trash{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -100,6 +100,10 @@
     background-color: #FE5050;
 }
 
+.container:hover .trash{
+    display: flex;
+}
+
 .trash > div{
     display: flex;
     width: 100%;
@@ -107,8 +111,9 @@
     align-items: center;
 }
 
-.trash:hover{
+.trash:hover, .trashMobile:hover{
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .trashMobile{
@@ -117,9 +122,14 @@
     width: 24px;
 }
 
+
 @media (max-width: 810px){
     .container{
         padding: 5px 0;
+    }
+
+    .container:hover .trash{
+        display: none;
     }
 
     .image{
@@ -159,7 +169,7 @@
         display: none;
     }
 
-    .trashMobile{
+    .container:hover .trashMobile{
         position: absolute;
         right: 0;
         top: 0;

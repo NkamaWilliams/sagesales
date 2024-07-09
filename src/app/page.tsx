@@ -26,7 +26,7 @@ export default function Home() {
           <div>
             <button className={styles.selectable}>Men</button>
             <button>Women</button>
-            <button>Babies</button>
+            <button>All</button>
           </div>
         </div>
 
