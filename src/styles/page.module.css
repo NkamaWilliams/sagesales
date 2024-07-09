@@ -3,6 +3,35 @@
   padding: 4rem;
 }
 
+.added{
+  position: fixed;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 233px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.added > div{
+  background-color: black;
+  padding: 8px;
+}
+
+.active{
+  opacity: 1;
+}
+
 .header{
   display: flex;
   justify-content: space-between;

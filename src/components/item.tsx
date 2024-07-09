@@ -8,10 +8,11 @@ interface props{
     brand: string,
     name: string,
     price: number,
-    colors?: boolean
+    colors?: boolean,
+    trigger: () => void
 }
 
-export default function Item({src, brand, name, price, colors = false}: props){
+export default function Item({src, brand, name, price, colors = false, trigger}: props){
     const handleAdd = () => {
         let cart:string[] = JSON.parse(localStorage.getItem("cart") ?? "[]");
         if (cart.includes(src)){
@@ -19,7 +20,7 @@ export default function Item({src, brand, name, price, colors = false}: props){
         }
         cart.push(src);
         localStorage.setItem("cart", JSON.stringify(cart));
-        console.log(`Cart: ${cart}`);
+        trigger();
     }
     return(
         <div className={styles.item}>

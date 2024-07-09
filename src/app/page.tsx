@@ -1,12 +1,30 @@
+'use client'
 import InputText from "@/components/text_input";
 import DropdownFilter from "@/components/dropdown-filter";
 import Item from "@/components/item";
+import Icon from "@/components/icon";
 import styles from "@/styles/page.module.css";
 import items from "@/resources/items.json"
 
 export default function Home() {
+  const triggerAdded = () => {
+    const added = document.getElementById("added");
+
+    if (added){
+      added.classList.add(styles.active);
+      setTimeout(() => {
+        added.classList.remove(styles.active);
+      }, 1500);
+    }
+  }
   return (
     <main className={styles.main}>
+      
+      <div id="added" className={styles.added}>
+        <div><Icon src="/tick.svg"/></div>
+        <p>Product Added to Cart</p>
+      </div>
+
       <header className={styles.header}>
         <div className={styles.tagline}>
           <h2>Express Yourself. Own Your Style.</h2>
@@ -41,7 +59,7 @@ export default function Home() {
       <div className={styles.products}>
         {
           items.map(item => 
-            <Item key={item.src} src={item.src} name={item.name} brand={item.brand} price={item.price} />
+            <Item key={item.src} src={item.src} name={item.name} brand={item.brand} price={item.price} trigger={triggerAdded} />
           )
         }
       </div>

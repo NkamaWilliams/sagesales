@@ -95,6 +95,10 @@
     display: block;
 }
 
+.flex{
+    display: flex;
+}
+
 @media (max-width: 810px){
     .item{
         padding: 2px;
