@@ -14,7 +14,7 @@ export default function Home() {
       added.classList.add(styles.active);
       setTimeout(() => {
         added.classList.remove(styles.active);
-      }, 1500);
+      }, 500);
     }
   }
   return (
