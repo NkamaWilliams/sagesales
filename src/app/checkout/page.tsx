@@ -4,12 +4,21 @@ import CheckoutItem from "@/components/checkout_item"
 import FormInput from "@/components/form_input"
 import Icon from "@/components/icon"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime"
 
+interface item{
+    name: string,
+    quantity: number,
+    price: number,
+    src: string
+}
+
 export default function Checkout(){
-    const [selected, setSelected] = useState(0);
+    const [selected, setSelected] = useState<number>(0);
+    const [items, setItems] = useState<item[]>([])
+    const [total, setTotal] = useState<number>(0)
     const router: AppRouterInstance = useRouter();
 
     const handleProceed = () => {
@@ -26,6 +35,14 @@ export default function Checkout(){
             router.push("/cart");
         }
     }
+
+    useEffect(() => {
+        const selectedItems:item[] = JSON.parse(localStorage.getItem("checkout") ?? "[]")
+        setItems(selectedItems)
+        setTotal(selectedItems.reduce((prev, current) => {
+            return prev + (current.price * current.quantity)
+        }, 0))
+    }, [])
     return(
         <div>
             <button onClick={handleReceed} className={styles.back}><Icon src="/arrow_left.svg"/>Checkout</button>
@@ -41,27 +58,28 @@ export default function Checkout(){
             <div className={styles.main}>
                 <div className={`${styles.page2} ${styles.page} ${selected == 1 && styles.reveal}`}>
                     <h3>Order details (4)</h3>
-                    <CheckoutItem src="/air_jordan.jpeg" name="Air Jordan One" price={199.99} />
-                    <CheckoutItem src="/cosmograph.jpeg" name="Cosmograph Daytona" price={499.99} quantity={2}/>
-                    <CheckoutItem src="/baseball.jpeg" name="Baseball Hat" price={9.98} quantity={2}/>
-                    <CheckoutItem src="/glasses.jpeg" name="Sunglasses" price={39.99} quantity={2}/>
+                    {
+                        items.map(item => 
+                            <CheckoutItem key={item.src} src={item.src} name={item.name} price={item.price} quantity={item.quantity} />
+                        )
+                    }
 
                     <div className={styles.overview}>
                         <div>
                             <p className={styles.subtotal}>Subtotal</p>
-                            <p className={styles.price}>₤ 1479.93</p>
+                            <p className={styles.price}>₤ {total.toFixed(2)}</p>
                         </div>
 
                         <div>
                             <p className={styles.subtotal}>Delivery</p>
-                            <p className={styles.price}>₤ 9.92</p>
+                            <p className={styles.price}>₤ {9.92}</p>
                         </div>
 
                         <hr/>
 
                         <div>
                             <p className={styles.total}>Total</p>
-                            <p className={styles.price}>₤ 9.92</p>
+                            <p className={styles.price}>₤ {(total + 9.92).toFixed(2)}</p>
                         </div>
 
                         <button onClick={handleProceed}>Proceed to Payment</button>

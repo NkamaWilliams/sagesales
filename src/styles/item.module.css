@@ -1,8 +1,9 @@
 .item{
+    position: relative;
     max-width: 320px;
     min-width: 230px;
     width: 100%;
-    margin: 5px;
+    margin: 5px 0;
     padding: 8px;
     border-radius: 16px;
 }
@@ -103,6 +104,7 @@
 
     .info > div{
         font-size: var(--font-small);
+        position: initial;
     }
 
     .button{
@@ -115,5 +117,11 @@
 
     .button > span{
         display: block;
+    }
+
+    .button{
+        position: absolute;
+        bottom: 5px;
+        right: 0;
     }
 }

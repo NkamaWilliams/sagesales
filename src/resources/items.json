@@ -3,96 +3,112 @@
         "brand": "Nike",
         "name": "Air Jordan One",
         "price": 199.99,
-        "src": "/air_jordan.jpeg"
+        "src": "/air_jordan.jpeg",
+        "description": "Celebrates Air Force parachutists with a premium leather upper, tactical accents, and a Swoosh reimagined as parachute cord. Take flight in iconic comfort."
     },
     {
         "brand": "Ray Bam",
         "name": "Sunglasses",
         "price": 39.99,
-        "src": "/glasses.jpeg"
+        "src": "/glasses.jpeg",
+        "description": "Timeless shades. Ray-Ban sunglasses. Iconic style, premium quality. Protect your eyes in classic looks. Aviator cool or Wayfarer edge. Find your perfect Ray-Bans."
     },
     {
         "brand": "Nike",
         "name": "Air Force One",
         "price": 109.99,
-        "src": "/air_force.jpeg"
+        "src": "/air_force.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "New Balance",
         "name": "237 V1 Sneaker",
         "price": 89.99,
-        "src": "/v1.jpeg"
+        "src": "/v1.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "Adidas",
         "name": "Gazelle",
         "price": 78.99,
-        "src": "/gazelle.jpeg"
+        "src": "/gazelle.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "New Balance",
         "name": "574 Core",
         "price": 69.99,
-        "src": "/527.jpeg"
+        "src": "/527.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "Adidas",
         "name": "Superstar",
         "price": 129.99,
-        "src": "/superstar.jpeg"
+        "src": "/superstar.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "Nike",
         "name": "Sweat Shirt",
         "price": 2.99,
-        "src": "/air_jordan_low.png"
+        "src": "/air_jordan_low.png",
+        "description": "No description currently given"
     },
     {
         "brand": "Nike",
         "name": "Brazil Jersey",
         "price": 29.99,
-        "src": "/brazil.jpeg"
+        "src": "/brazil.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "Nike",
         "name": "Lakers Jersey",
         "price": 25.99,
-        "src": "/lakers.jpeg"
+        "src": "/lakers.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "Polo",
         "name": "Baseball Hat",
         "price": 4.99,
-        "src": "/baseball.jpeg"
+        "src": "/baseball.jpeg",
+        "description": "Polo pony pops. Classic baseball hat with iconic logo. Adjustable back for all-day comfort. Preppy style or sporty vibes."
     },
     {
         "brand": "New York",
         "name": "Beanie",
         "price": 4.99,
-        "src": "/beanie.jpeg"
+        "src": "/beanie.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "Lee",
         "name": "Men Jean",
         "price": 9.99,
-        "src": "/jean1.jpeg"
+        "src": "/jean1.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "Wrangler",
         "name": "Men Jean",
         "price": 19.99,
-        "src": "/jean2.jpeg"
+        "src": "/jean2.jpeg",
+        "description": "No description currently given"
     },
     {
         "brand": "Rolex",
         "name": "Cosmograph Daytona",
         "price": 499.99,
-        "src": "/cosmograph.jpeg"
+        "src": "/cosmograph.jpeg",
+        "description": "Rolex Daytona: a racing legend's chronograph. Tachymeter bezel, self-winding movement, Oyster case. Speed, precision, icon status."
     },
     {
         "brand": "Ray Bam",
         "name": "Party Glasses",
         "price": 69.99,
-        "src": "/party_glasses.jpeg"
+        "src": "/party_glasses.jpeg",
+        "description": "No description currently given"
     }
 ]
