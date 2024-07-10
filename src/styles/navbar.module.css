@@ -65,6 +65,10 @@
     line-height: 22px;
 }
 
+.link:hover{
+    background-color: #DFDFDF;
+}
+
 .selected{
     background-color: var(--link-bg);
     color: white;
